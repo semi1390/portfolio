@@ -79,22 +79,25 @@ export default function Modal({ product, onClose }) {
           marginBottom: 24,
           overflow: 'hidden',
         }}>
-          {product.videoUrl ? (
-            <iframe
-              src={product.videoUrl}
-              style={{ width: '100%', height: '100%', border: 'none' }}
-              allowFullScreen
-            />
-          ) : (
-            <div style={{ textAlign: 'center' }}>
-              <div style={{ fontSize: 32, marginBottom: 12, opacity: 0.3 }}>▶</div>
-              <p style={{
-                fontFamily: 'Space Mono, monospace',
-                fontSize: 12,
-                color: 'rgba(0,255,163,0.4)',
-              }}>demo video coming soon</p>
-            </div>
-          )}
+      {product.videoUrl ? (
+  <video
+    src={product.videoUrl}
+    controls
+    autoPlay
+    muted
+    loop
+    style={{ width: '100%', height: '100%', borderRadius: 8 }}
+  />
+) : (
+  <div style={{ textAlign: 'center' }}>
+    <div style={{ fontSize: 32, marginBottom: 12, opacity: 0.3 }}>▶</div>
+    <p style={{
+      fontFamily: 'Space Mono, monospace',
+      fontSize: 12,
+      color: 'rgba(0,255,163,0.4)',
+    }}>demo video coming soon</p>
+  </div>
+)}
         </div>
 
         <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 24 }}>

@@ -15,7 +15,7 @@ export const PRODUCTS = [
       "Works 24/7 without staff"
     ],
     demoUrl: "https://t.me/aileadqualifier1_bot",
-    videoUrl: null
+    videoUrl: "/videos/lead-qualifier.mp4"
   },
   {
     title: "Appointment Booking Bot",
@@ -33,7 +33,7 @@ export const PRODUCTS = [
       "Works for any appointment business"
     ],
     demoUrl: "https://t.me/Smilepro_dental_bot",
-    videoUrl: null
+    videoUrl: "/videos/appointment-bot.mp4",
   },
   {
     title: "AI Support Agent",
@@ -51,6 +51,6 @@ export const PRODUCTS = [
       "Available 24/7, zero staff needed"
     ],
     demoUrl: "https://t.me/Aisupportassistant1_bot",
-    videoUrl: null
+    videoUrl: "/videos/support-bot.mp4",
   }
 ];

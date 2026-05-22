@@ -5,10 +5,15 @@ export const metadata = {
   description: "AI-powered bots for businesses that want to grow",
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body style={{ overflowX: 'hidden', margin: 0 }}>{children}</body>
     </html>
   );
 }

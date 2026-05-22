@@ -8,14 +8,14 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main>
+    <main style={{ overflowX: 'hidden' }}>
       <div className="grid-bg"></div>
       <Nav />
-      <Hero />
+      <div id="products"><Hero /></div>
       <Products />
-      <HowItWorks />
-      <Pricing />
-      <CTA />
+      <div id="how-it-works"><HowItWorks /></div>
+      <div id="pricing"><Pricing /></div>
+      <div id="contact"><CTA /></div>
       <Footer />
     </main>
   );

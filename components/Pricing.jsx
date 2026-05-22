@@ -30,7 +30,7 @@ export default function Pricing() {
     },
     {
       name: 'Maintenance',
-      price: '$150',
+      price: '$100',
       period: 'per month',
       featured: false,
       features: [

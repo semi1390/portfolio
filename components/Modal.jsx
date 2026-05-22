@@ -72,7 +72,7 @@ export default function Modal({ product, onClose }) {
           background: '#080b10',
           border: '0.5px solid rgba(0,255,163,0.1)',
           borderRadius: 8,
-          aspectRatio: '16/9',
+           aspectRatio: '9/16',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',

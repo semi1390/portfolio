@@ -56,3 +56,40 @@ body {
 .fade-up {
   animation: fadeUp 0.6s ease both;
 }
+@media (max-width: 768px) {
+  nav {
+    padding: 16px 20px;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  section {
+    padding: 60px 20px !important;
+  }
+
+  h1 {
+    font-size: 36px !important;
+  }
+
+  h2 {
+    font-size: 28px !important;
+  }
+
+  .hero-terminal {
+    display: none;
+  }
+
+  .stats-row {
+    flex-wrap: wrap;
+    gap: 24px !important;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+    padding: 24px 20px !important;
+  }
+}

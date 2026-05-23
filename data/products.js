@@ -69,6 +69,6 @@ export const PRODUCTS = [
     "All orders saved to Airtable"
   ],
   demoUrl: "https://t.me/zestkitchen_bot",
-  videoUrl: null
+  videoUrl: "/videos/restaurant-bot.mp4"
 },
 ];

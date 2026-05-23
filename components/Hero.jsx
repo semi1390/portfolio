@@ -20,7 +20,7 @@ export default function Hero() {
       <div style={{
         fontFamily: 'Space Mono, monospace',
         fontSize: 11,
-        color: '#00ffa3',
+        color: 'var(--green)',
         letterSpacing: '0.2em',
         textTransform: 'uppercase',
         marginBottom: 24,
@@ -28,7 +28,7 @@ export default function Hero() {
         alignItems: 'center',
         gap: 8,
       }}>
-        <span style={{ display: 'block', width: 24, height: 1, background: '#00ffa3' }}></span>
+        <span style={{ display: 'block', width: 24, height: 1, background: 'var(--green)' }}></span>
         available for new projects
       </div>
 
@@ -40,14 +40,15 @@ export default function Hero() {
             lineHeight: 1.05,
             marginBottom: 24,
             letterSpacing: '-0.02em',
+            color: 'var(--text)',
           }}>
             AI-powered bots for businesses that want to{' '}
-            <span style={{ color: '#00ffa3' }}>grow</span>
+            <span style={{ color: 'var(--green)' }}>grow</span>
           </h1>
 
           <p style={{
             fontSize: 16,
-            color: 'rgba(232,234,240,0.55)',
+            color: 'var(--text-muted)',
             maxWidth: 440,
             lineHeight: 1.7,
             marginBottom: 40,
@@ -58,8 +59,8 @@ export default function Hero() {
           <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
             <a href="#products">
               <button style={{
-                background: '#00ffa3',
-                color: '#080b10',
+                background: 'var(--green)',
+                color: 'var(--bg)',
                 border: 'none',
                 padding: '14px 28px',
                 fontFamily: 'Syne, sans-serif',
@@ -72,8 +73,8 @@ export default function Hero() {
             <a href="#contact">
               <button style={{
                 background: 'transparent',
-                color: '#e8eaf0',
-                border: '0.5px solid rgba(232,234,240,0.25)',
+                color: 'var(--text)',
+                border: '0.5px solid var(--border)',
                 padding: '14px 28px',
                 fontFamily: 'Syne, sans-serif',
                 fontSize: 14,
@@ -91,11 +92,11 @@ export default function Hero() {
             right: 0,
             top: 0,
             width: 280,
-            opacity: 0.8,
+            opacity: 0.9,
           }}>
             <div style={{
-              background: '#0d1117',
-              border: '0.5px solid rgba(0,255,163,0.2)',
+              background: '#111',
+              border: '0.5px solid var(--border-green)',
               borderRadius: 8,
               padding: 20,
               fontFamily: 'Space Mono, monospace',
@@ -107,20 +108,20 @@ export default function Hero() {
                 <div style={{ width: 10, height: 10, borderRadius: '50%', background: '#28ca41' }}></div>
               </div>
               <div style={{ marginBottom: 6 }}>
-                <span style={{ color: 'rgba(232,234,240,0.3)' }}>$ </span>
-                <span style={{ color: '#00ffa3' }}>node </span>
-                <span style={{ color: '#e8eaf0' }}>lead-qualifier.js</span>
+                <span style={{ color: 'rgba(255,255,255,0.3)' }}>$ </span>
+                <span style={{ color: 'var(--green)' }}>node </span>
+                <span style={{ color: '#fff' }}>lead-qualifier.js</span>
               </div>
-              <div style={{ marginBottom: 6, color: 'rgba(232,234,240,0.3)' }}>Starting workflow...</div>
-              <div style={{ marginBottom: 6 }}><span style={{ color: '#00ffa3' }}>✓ </span><span style={{ color: '#e8eaf0' }}>Lead scored 9/10</span></div>
-              <div style={{ marginBottom: 6 }}><span style={{ color: '#00ffa3' }}>✓ </span><span style={{ color: '#e8eaf0' }}>Research complete</span></div>
-              <div style={{ marginBottom: 6 }}><span style={{ color: '#79b8ff' }}>→ </span><span style={{ color: '#e8eaf0' }}>Proposal generated</span></div>
-              <div style={{ marginBottom: 6 }}><span style={{ color: '#00ffa3' }}>✓ </span><span style={{ color: '#e8eaf0' }}>Saved to Airtable</span></div>
-              <div style={{ color: 'rgba(232,234,240,0.3)' }}>Done in 4.2s <span style={{
+              <div style={{ marginBottom: 6, color: 'rgba(255,255,255,0.3)' }}>Starting workflow...</div>
+              <div style={{ marginBottom: 6 }}><span style={{ color: 'var(--green)' }}>✓ </span><span style={{ color: '#fff' }}>Lead scored 9/10</span></div>
+              <div style={{ marginBottom: 6 }}><span style={{ color: 'var(--green)' }}>✓ </span><span style={{ color: '#fff' }}>Research complete</span></div>
+              <div style={{ marginBottom: 6 }}><span style={{ color: '#79b8ff' }}>→ </span><span style={{ color: '#fff' }}>Proposal generated</span></div>
+              <div style={{ marginBottom: 6 }}><span style={{ color: 'var(--green)' }}>✓ </span><span style={{ color: '#fff' }}>Saved to Airtable</span></div>
+              <div style={{ color: 'rgba(255,255,255,0.3)' }}>Done in 4.2s <span style={{
                 display: 'inline-block',
                 width: 8,
                 height: 14,
-                background: '#00ffa3',
+                background: 'var(--green)',
                 verticalAlign: 'middle',
                 animation: 'blink 1s infinite',
               }}></span></div>
@@ -134,7 +135,7 @@ export default function Hero() {
         gap: isMobile ? 16 : 40,
         marginTop: 60,
         paddingTop: 40,
-        borderTop: '0.5px solid rgba(0,255,163,0.1)',
+        borderTop: '0.5px solid var(--border-green)',
         flexWrap: 'wrap',
       }}>
         {[
@@ -148,12 +149,12 @@ export default function Hero() {
               display: 'block',
               fontSize: isMobile ? 24 : 32,
               fontWeight: 800,
-              color: '#00ffa3',
+              color: 'var(--green)',
               fontFamily: 'Space Mono, monospace',
             }}>{stat.num}</span>
             <span style={{
               fontSize: 11,
-              color: 'rgba(232,234,240,0.4)',
+              color: 'var(--text-muted)',
               letterSpacing: '0.08em',
               textTransform: 'uppercase',
             }}>{stat.label}</span>

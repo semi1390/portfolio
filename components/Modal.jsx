@@ -20,8 +20,8 @@ export default function Modal({ product, onClose }) {
       <div
         onClick={e => e.stopPropagation()}
         style={{
-          background: '#0d1117',
-          border: '0.5px solid rgba(0,255,163,0.2)',
+          background: 'var(--surface)',
+          border: '0.5px solid var(--border-green)',
           borderRadius: 16,
           maxWidth: 600,
           width: '100%',
@@ -39,7 +39,7 @@ export default function Modal({ product, onClose }) {
             right: 16,
             background: 'none',
             border: 'none',
-            color: 'rgba(232,234,240,0.4)',
+            color: 'var(--text-muted)',
             cursor: 'pointer',
             fontSize: 20,
           }}
@@ -48,7 +48,7 @@ export default function Modal({ product, onClose }) {
         <div style={{
           fontFamily: 'Space Mono, monospace',
           fontSize: 11,
-          color: '#00ffa3',
+          color: 'var(--green)',
           letterSpacing: '0.15em',
           textTransform: 'uppercase',
           marginBottom: 12,
@@ -58,46 +58,47 @@ export default function Modal({ product, onClose }) {
           fontSize: 24,
           fontWeight: 800,
           marginBottom: 12,
-          color: '#e8eaf0',
+          color: 'var(--text)',
         }}>{product.title}</h2>
 
         <p style={{
           fontSize: 14,
-          color: 'rgba(232,234,240,0.55)',
+          color: 'var(--text-muted)',
           lineHeight: 1.7,
           marginBottom: 24,
         }}>{product.fullDesc}</p>
 
         <div style={{
-          background: '#080b10',
-          border: '0.5px solid rgba(0,255,163,0.1)',
+          background: '#111',
+          border: '0.5px solid var(--border-green)',
           borderRadius: 8,
-           aspectRatio: '9/16',
+          aspectRatio: '9/16',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
           marginBottom: 24,
           overflow: 'hidden',
         }}>
-      {product.videoUrl ? (
-  <video
-    src={product.videoUrl}
-    controls
-    autoPlay
-    muted
-    loop
-    style={{ width: '100%', height: '100%', borderRadius: 8 }}
-  />
-) : (
-  <div style={{ textAlign: 'center' }}>
-    <div style={{ fontSize: 32, marginBottom: 12, opacity: 0.3 }}>▶</div>
-    <p style={{
-      fontFamily: 'Space Mono, monospace',
-      fontSize: 12,
-      color: 'rgba(0,255,163,0.4)',
-    }}>demo video coming soon</p>
-  </div>
-)}
+          {product.videoUrl ? (
+            <video
+              src={product.videoUrl}
+              controls
+              autoPlay
+              muted
+              loop
+              style={{ width: '100%', height: '100%', borderRadius: 8 }}
+            />
+          ) : (
+            <div style={{ textAlign: 'center' }}>
+              <div style={{ fontSize: 32, marginBottom: 12, opacity: 0.3, color: '#fff' }}>▶</div>
+              <p style={{
+                fontFamily: 'Space Mono, monospace',
+                fontSize: 12,
+                color: 'var(--green)',
+                opacity: 0.4,
+              }}>demo video coming soon</p>
+            </div>
+          )}
         </div>
 
         <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', marginBottom: 24 }}>
@@ -108,8 +109,8 @@ export default function Modal({ product, onClose }) {
               padding: '3px 8px',
               borderRadius: 4,
               background: 'rgba(0,255,163,0.06)',
-              color: '#00ffa3',
-              border: '0.5px solid rgba(0,255,163,0.15)',
+              color: 'var(--green)',
+              border: '0.5px solid var(--border-green)',
             }}>{tag}</span>
           ))}
         </div>
@@ -118,14 +119,14 @@ export default function Modal({ product, onClose }) {
           {product.features.map(f => (
             <li key={f} style={{
               fontSize: 13,
-              color: 'rgba(232,234,240,0.6)',
+              color: 'var(--text-muted)',
               padding: '8px 0',
-              borderBottom: '0.5px solid rgba(232,234,240,0.05)',
+              borderBottom: '0.5px solid var(--border)',
               display: 'flex',
               alignItems: 'center',
               gap: 8,
             }}>
-              <span style={{ color: '#00ffa3', fontSize: 12 }}>✓</span>
+              <span style={{ color: 'var(--green)', fontSize: 12 }}>✓</span>
               {f}
             </li>
           ))}
@@ -135,8 +136,8 @@ export default function Modal({ product, onClose }) {
           <a href={product.demoUrl} target="_blank" rel="noopener noreferrer" style={{ flex: 1 }}>
             <button style={{
               width: '100%',
-              background: '#00ffa3',
-              color: '#080b10',
+              background: 'var(--green)',
+              color: 'var(--bg)',
               border: 'none',
               padding: '14px 28px',
               fontFamily: 'Syne, sans-serif',

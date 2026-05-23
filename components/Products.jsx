@@ -11,7 +11,7 @@ export default function Products() {
       <div style={{
         fontFamily: 'Space Mono, monospace',
         fontSize: 11,
-        color: '#00ffa3',
+        color: 'var(--green)',
         letterSpacing: '0.2em',
         textTransform: 'uppercase',
         marginBottom: 12,
@@ -22,6 +22,7 @@ export default function Products() {
         fontWeight: 800,
         marginBottom: 48,
         letterSpacing: '-0.02em',
+        color: 'var(--text)',
       }}>Products</h2>
 
       <div style={{
@@ -34,19 +35,19 @@ export default function Products() {
             key={i}
             onClick={() => setSelected(product)}
             style={{
-              background: '#0d1117',
-              border: '0.5px solid rgba(232,234,240,0.08)',
+              background: 'var(--surface)',
+              border: '0.5px solid var(--border)',
               borderRadius: 12,
               padding: '28px 24px',
               cursor: 'pointer',
               transition: 'border-color 0.2s, transform 0.2s',
             }}
             onMouseEnter={e => {
-              e.currentTarget.style.borderColor = 'rgba(0,255,163,0.3)';
+              e.currentTarget.style.borderColor = 'var(--border-green)';
               e.currentTarget.style.transform = 'translateY(-2px)';
             }}
             onMouseLeave={e => {
-              e.currentTarget.style.borderColor = 'rgba(232,234,240,0.08)';
+              e.currentTarget.style.borderColor = 'var(--border)';
               e.currentTarget.style.transform = 'translateY(0)';
             }}
           >
@@ -66,12 +67,12 @@ export default function Products() {
               fontSize: 16,
               fontWeight: 600,
               marginBottom: 8,
-              color: '#e8eaf0',
+              color: 'var(--text)',
             }}>{product.title}</h3>
 
             <p style={{
               fontSize: 13,
-              color: 'rgba(232,234,240,0.45)',
+              color: 'var(--text-muted)',
               lineHeight: 1.6,
               marginBottom: 16,
             }}>{product.description}</p>
@@ -84,19 +85,20 @@ export default function Products() {
                   padding: '3px 8px',
                   borderRadius: 4,
                   background: 'rgba(0,255,163,0.06)',
-                  color: '#00ffa3',
-                  border: '0.5px solid rgba(0,255,163,0.15)',
+                  color: 'var(--green)',
+                  border: '0.5px solid var(--border-green)',
                 }}>{tag}</span>
               ))}
             </div>
 
             <div style={{
               fontSize: 12,
-              color: 'rgba(0,255,163,0.5)',
+              color: 'var(--green)',
               display: 'flex',
               alignItems: 'center',
               gap: 6,
               fontFamily: 'Space Mono, monospace',
+              opacity: 0.7,
             }}>
               ▶ {product.videoUrl ? 'watch demo' : 'view details'}
             </div>

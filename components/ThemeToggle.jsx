@@ -2,25 +2,25 @@
 import { useState, useEffect } from 'react';
 
 export default function ThemeToggle() {
-  const [isLight, setIsLight] = useState(false);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     const saved = localStorage.getItem('theme');
-    if (saved === 'light') {
-      setIsLight(true);
-      document.documentElement.classList.add('light');
+    if (saved === 'dark') {
+      setIsDark(true);
+      document.documentElement.classList.add('dark');
     }
   }, []);
 
   function toggle() {
-    const next = !isLight;
-    setIsLight(next);
+    const next = !isDark;
+    setIsDark(next);
     if (next) {
-      document.documentElement.classList.add('light');
-      localStorage.setItem('theme', 'light');
-    } else {
-      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
     }
   }
 
@@ -41,9 +41,8 @@ export default function ThemeToggle() {
         fontFamily: 'Space Mono, monospace',
         transition: 'all 0.2s',
       }}
-      aria-label="toggle theme"
     >
-      {isLight ? '◐ dark' : '◑ light'}
+      {isDark ? '◑ light' : '◐ dark'}
     </button>
   );
 }

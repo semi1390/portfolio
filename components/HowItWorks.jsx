@@ -24,13 +24,13 @@ export default function HowItWorks() {
 
   return (
     <section id="how-it-works" style={{
-      background: '#0d1117',
+      background: 'var(--surface)',
       padding: '80px 40px',
     }}>
       <div style={{
         fontFamily: 'Space Mono, monospace',
         fontSize: 11,
-        color: '#00ffa3',
+        color: 'var(--green)',
         letterSpacing: '0.2em',
         textTransform: 'uppercase',
         marginBottom: 12,
@@ -41,6 +41,7 @@ export default function HowItWorks() {
         fontWeight: 800,
         marginBottom: 48,
         letterSpacing: '-0.02em',
+        color: 'var(--text)',
       }}>How it works</h2>
 
       <div style={{
@@ -51,14 +52,14 @@ export default function HowItWorks() {
           <div key={i} style={{
             padding: '32px 24px',
             borderRight: i < steps.length - 1
-              ? '0.5px solid rgba(232,234,240,0.06)'
+              ? '0.5px solid var(--border)'
               : 'none',
           }}>
             <div style={{
               fontFamily: 'Space Mono, monospace',
               fontSize: 48,
               fontWeight: 700,
-              color: 'rgba(0,255,163,0.08)',
+              color: 'var(--border-green)',
               lineHeight: 1,
               marginBottom: 16,
             }}>{step.num}</div>
@@ -66,11 +67,11 @@ export default function HowItWorks() {
               fontSize: 15,
               fontWeight: 600,
               marginBottom: 8,
-              color: '#e8eaf0',
+              color: 'var(--text)',
             }}>{step.title}</h4>
             <p style={{
               fontSize: 13,
-              color: 'rgba(232,234,240,0.4)',
+              color: 'var(--text-muted)',
               lineHeight: 1.6,
             }}>{step.desc}</p>
           </div>

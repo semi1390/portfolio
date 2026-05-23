@@ -49,7 +49,7 @@ export default function Pricing() {
       <div style={{
         fontFamily: 'Space Mono, monospace',
         fontSize: 11,
-        color: '#00ffa3',
+        color: 'var(--green)',
         letterSpacing: '0.2em',
         textTransform: 'uppercase',
         marginBottom: 12,
@@ -60,6 +60,7 @@ export default function Pricing() {
         fontWeight: 800,
         marginBottom: 48,
         letterSpacing: '-0.02em',
+        color: 'var(--text)',
       }}>Pricing</h2>
 
       <div style={{
@@ -69,10 +70,10 @@ export default function Pricing() {
       }}>
         {plans.map((plan, i) => (
           <div key={i} style={{
-            background: plan.featured ? 'rgba(0,255,163,0.03)' : '#0d1117',
+            background: plan.featured ? 'rgba(0,255,163,0.03)' : 'var(--surface)',
             border: plan.featured
-              ? '0.5px solid rgba(0,255,163,0.3)'
-              : '0.5px solid rgba(232,234,240,0.08)',
+              ? '0.5px solid var(--border-green)'
+              : '0.5px solid var(--border)',
             borderRadius: 12,
             padding: '32px 24px',
           }}>
@@ -80,13 +81,13 @@ export default function Pricing() {
               fontFamily: 'Space Mono, monospace',
               fontSize: 32,
               fontWeight: 700,
-              color: '#00ffa3',
+              color: 'var(--green)',
               marginBottom: 4,
             }}>{plan.price}</div>
 
             <div style={{
               fontSize: 12,
-              color: 'rgba(232,234,240,0.35)',
+              color: 'var(--text-muted)',
               marginBottom: 20,
               letterSpacing: '0.05em',
             }}>{plan.period}</div>
@@ -95,20 +96,21 @@ export default function Pricing() {
               fontSize: 16,
               fontWeight: 600,
               marginBottom: 16,
+              color: 'var(--text)',
             }}>{plan.name}</h3>
 
             <ul style={{ listStyle: 'none', marginBottom: 24 }}>
               {plan.features.map(f => (
                 <li key={f} style={{
                   fontSize: 13,
-                  color: 'rgba(232,234,240,0.55)',
+                  color: 'var(--text-muted)',
                   padding: '6px 0',
-                  borderBottom: '0.5px solid rgba(232,234,240,0.05)',
+                  borderBottom: '0.5px solid var(--border)',
                   display: 'flex',
                   alignItems: 'center',
                   gap: 8,
                 }}>
-                  <span style={{ color: '#00ffa3', fontSize: 12 }}>→</span>
+                  <span style={{ color: 'var(--green)', fontSize: 12 }}>→</span>
                   {f}
                 </li>
               ))}
@@ -117,9 +119,9 @@ export default function Pricing() {
             <button style={{
               width: '100%',
               padding: '12px',
-              background: plan.featured ? '#00ffa3' : 'transparent',
-              color: plan.featured ? '#080b10' : '#e8eaf0',
-              border: plan.featured ? 'none' : '0.5px solid rgba(232,234,240,0.25)',
+              background: plan.featured ? 'var(--green)' : 'transparent',
+              color: plan.featured ? 'var(--bg)' : 'var(--text)',
+              border: plan.featured ? 'none' : '0.5px solid var(--border)',
               borderRadius: 4,
               fontFamily: 'Syne, sans-serif',
               fontSize: 14,

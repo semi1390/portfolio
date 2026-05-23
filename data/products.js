@@ -52,5 +52,23 @@ export const PRODUCTS = [
     ],
     demoUrl: "https://t.me/Aisupportassistant1_bot",
     videoUrl: "/videos/support-bot.mp4",
-  }
+  },
+  {
+  title: "Restaurant Order Bot",
+  category: "Food & hospitality",
+  icon: "🍔",
+  description: "Customers browse the menu, add items to cart and place orders directly on Telegram or WhatsApp. Owner gets instant notification with full order details.",
+  fullDesc: "Turn any restaurant into a 24/7 ordering machine. Customers browse categories, select items, choose quantities, and place delivery or pickup orders — all in a natural chat flow. Owner gets notified instantly with the complete order.",
+  tags: ["Telegram", "WhatsApp", "Airtable", "Claude AI"],
+  features: [
+    "Interactive menu with categories",
+    "Add multiple items with quantities",
+    "Delivery and pickup options",
+    "AI-generated order confirmation",
+    "Owner notified instantly",
+    "All orders saved to Airtable"
+  ],
+  demoUrl: "https://t.me/zestkitchen_bot",
+  videoUrl: null
+},
 ];

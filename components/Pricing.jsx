@@ -116,18 +116,25 @@ export default function Pricing() {
               ))}
             </ul>
 
-            <button style={{
-              width: '100%',
-              padding: '12px',
-              background: plan.featured ? 'var(--green)' : 'transparent',
-              color: plan.featured ? 'var(--bg)' : 'var(--text)',
-              border: plan.featured ? 'none' : '0.5px solid var(--border)',
-              borderRadius: 4,
-              fontFamily: 'Syne, sans-serif',
-              fontSize: 14,
-              fontWeight: 600,
-              cursor: 'pointer',
-            }}>{plan.cta}</button>
+          <a 
+  href="https://wa.me/2348071238316?text=Hi%20Semilore%2C%20I%27m%20interested%20in%20the%20AI%20bot%20service" 
+  target="_blank" 
+  rel="noopener noreferrer"
+  style={{ display: 'block' }}
+>
+  <button style={{
+    width: '100%',
+    padding: '12px',
+    background: plan.featured ? 'var(--green)' : 'transparent',
+    color: plan.featured ? 'var(--bg)' : 'var(--text)',
+    border: plan.featured ? 'none' : '0.5px solid var(--border)',
+    borderRadius: 4,
+    fontFamily: 'Syne, sans-serif',
+    fontSize: 14,
+    fontWeight: 600,
+    cursor: 'pointer',
+  }}>{plan.cta}</button>
+</a>
           </div>
         ))}
       </div>
